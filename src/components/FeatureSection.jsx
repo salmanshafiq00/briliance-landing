@@ -3,6 +3,35 @@ import workSyncImage from '../assets/images/services/work-sync.png';
 import integrationImage from '../assets/images/services/integration.png';
 import speakImage from '../assets/images/services/speak.png';
 import ServiceSvg from './ServiceSvg';
+import ServiceCard from './ServiceCard';
+
+// Services data array
+const servicesData = [
+    {
+        title: 'Smart. Simple. Brilliant.',
+        description: 'Your data is beautifully organized so you see everything clearly without the clutter.',
+        imageUrl: workOrderImage,
+        borderClasses: 'border-b border-r-0 md:border-r border-[rgba(55,50,47,0.12)]'
+    },
+    {
+        title: 'Your work, in sync',
+        description: 'Every update flows instantly across your team and keeps collaboration effortless and fast.',
+        imageUrl: workSyncImage,
+        borderClasses: 'border-b border-[rgba(55,50,47,0.12)]'
+    },
+    {
+        title: 'Effortless integration',
+        description: 'All your favorite tools connect in one place and work together seamlessly by design.',
+        imageUrl: integrationImage,
+        borderClasses: 'border-r-0 md:border-r border-[rgba(55,50,47,0.12)]'
+    },
+    {
+        title: 'Numbers that speak',
+        description: 'Track growth with precision and turn raw data into confident decisions you can trust.',
+        imageUrl: speakImage,
+        borderClasses: ''
+    }
+];
 
 function FeatureSection() {
     return (
@@ -68,121 +97,15 @@ function FeatureSection() {
                     <div
                         className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-0 border-l border-r border-[rgba(55,50,47,0.12)]"
                     >
-                        {/* Top Left  */}
-                        <div
-                            className="border-b border-r-0 md:border-r border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6"
-                        >
-                            <div className="flex flex-col gap-2">
-                                <h3
-                                    className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight"
-                                >
-                                    Smart. Simple. Brilliant.
-                                </h3>
-                                <p
-                                    className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed"
-                                >
-                                    Your data is beautifully
-                                    organized so you see
-                                    everything clearly without
-                                    the clutter.
-                                </p>
-                            </div>
-                            <div
-                                className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex items-center justify-center overflow-hidden"
-                            >
-                                <img
-                                    src={workOrderImage}
-                                    className="h-1/2 object-cover"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Top Right with Sync Avatars  */}
-                        <div
-                            className="border-b border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6"
-                        >
-                            <div className="flex flex-col gap-2">
-                                <h3
-                                    className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight"
-                                >
-                                    Your work, in sync
-                                </h3>
-                                <p
-                                    className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed"
-                                >
-                                    Every update flows instantly
-                                    across your team and keeps
-                                    collaboration effortless and
-                                    fast.
-                                </p>
-                            </div>
-                            <div
-                                className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex items-center justify-center overflow-hidden relative"
-                            >
-                                <img
-                                    src={workSyncImage}
-                                    className="h-full object-cover"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Bottom Left  */}
-                        <div
-                            className="border-r-0 md:border-r border-[rgba(55,50,47,0.12)] p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6 bg-transparent"
-                        >
-                            <div className="flex flex-col gap-2">
-                                <h3
-                                    className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight"
-                                >
-                                    Effortless integration
-                                </h3>
-                                <p
-                                    className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed"
-                                >
-                                    All your favorite tools
-                                    connect in one place and
-                                    work together seamlessly by
-                                    design.
-                                </p>
-                            </div>
-                            <div
-                                className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex items-center justify-center overflow-hidden relative"
-                            >
-                                <img
-                                    src={integrationImage}
-                                    className="h-full object-cover"
-                                />
-                            </div>
-                        </div>
-
-                        {/* Bottom Right  */}
-                        <div
-                            className="p-4 sm:p-6 md:p-8 lg:p-12 flex flex-col justify-start items-start gap-4 sm:gap-6"
-                        >
-                            <div className="flex flex-col gap-2">
-                                <h3
-                                    className="text-[#37322F] text-lg sm:text-xl font-semibold leading-tight"
-                                >
-                                    Numbers that speak
-                                </h3>
-                                <p
-                                    className="text-[#605A57] text-sm md:text-base font-normal leading-relaxed"
-                                >
-                                    Track growth with precision
-                                    and turn raw data into
-                                    confident decisions you can
-                                    trust.
-                                </p>
-                            </div>
-                            <div
-                                className="w-full h-[200px] sm:h-[250px] md:h-[300px] rounded-lg flex items-center justify-center overflow-hidden relative"
-                            >
-                                <img
-                                    src={speakImage}
-                                    className="h-full object-cover"
-                                />
-                            </div>
-                        </div>
+                        {servicesData.map((service, index) => (
+                            <ServiceCard 
+                                key={index}
+                                title={service.title}
+                                description={service.description}
+                                imageUrl={service.imageUrl}
+                                borderClasses={service.borderClasses}
+                            />
+                        ))}
                     </div>
 
                     {/* Right Pattern  */}
