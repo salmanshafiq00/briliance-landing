@@ -1,4 +1,3 @@
-
 function TestimonialSvg() {
   return (
     <svg
@@ -14,7 +13,7 @@ function TestimonialSvg() {
         width="4"
         height="6"
         stroke="#37322F"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
       />
       <rect
@@ -23,80 +22,21 @@ function TestimonialSvg() {
         width="4"
         height="8"
         stroke="#37322F"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
       />
-      <rect
-        x="2"
-        y="4"
-        width="1"
-        height="1"
-        fill="#37322F"
-      />
-      <rect
-        x="3.5"
-        y="4"
-        width="1"
-        height="1"
-        fill="#37322F"
-      />
-      <rect
-        x="2"
-        y="5.5"
-        width="1"
-        height="1"
-        fill="#37322F"
-      />
-      <rect
-        x="3.5"
-        y="5.5"
-        width="1"
-        height="1"
-        fill="#37322F"
-      />
-      <rect
-        x="8"
-        y="2"
-        width="1"
-        height="1"
-        fill="#37322F"
-      />
-      <rect
-        x="9.5"
-        y="2"
-        width="1"
-        height="1"
-        fill="#37322F"
-      />
-      <rect
-        x="8"
-        y="3.5"
-        width="1"
-        height="1"
-        fill="#37322F"
-      />
-      <rect
-        x="9.5"
-        y="3.5"
-        width="1"
-        height="1"
-        fill="#37322F"
-      />
-      <rect
-        x="8"
-        y="5"
-        width="1"
-        height="1"
-        fill="#37322F"
-      />
-      <rect
-        x="9.5"
-        y="5"
-        width="1"
-        height="1"
-        fill="#37322F"
-      />
+      <rect x="2" y="4" width="1" height="1" fill="#37322F" />
+      <rect x="3.5" y="4" width="1" height="1" fill="#37322F" />
+      <rect x="2" y="5.5" width="1" height="1" fill="#37322F" />
+      <rect x="3.5" y="5.5" width="1" height="1" fill="#37322F" />
+      <rect x="8" y="2" width="1" height="1" fill="#37322F" />
+      <rect x="9.5" y="2" width="1" height="1" fill="#37322F" />
+      <rect x="8" y="3.5" width="1" height="1" fill="#37322F" />
+      <rect x="9.5" y="3.5" width="1" height="1" fill="#37322F" />
+      <rect x="8" y="5" width="1" height="1" fill="#37322F" />
+      <rect x="9.5" y="5" width="1" height="1" fill="#37322F" />
     </svg>
   );
-};
+}
+
 export default TestimonialSvg;
