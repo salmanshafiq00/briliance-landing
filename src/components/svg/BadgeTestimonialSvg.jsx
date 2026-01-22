@@ -1,4 +1,4 @@
-function TestimonialSvg() {
+function BadgeTestimonialSvg() {
   return (
     <svg
       width="12"
@@ -39,4 +39,4 @@ function TestimonialSvg() {
   );
 }
 
-export default TestimonialSvg;
+export default BadgeTestimonialSvg;

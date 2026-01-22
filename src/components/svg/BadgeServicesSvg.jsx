@@ -1,4 +1,4 @@
-function ServiceSvg() {
+function BadgeServicesSvg() {
   return (
     <svg
       width="12"
@@ -47,4 +47,4 @@ function ServiceSvg() {
   );
 }
 
-export default ServiceSvg;
+export default BadgeServicesSvg;

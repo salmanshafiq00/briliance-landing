@@ -1,4 +1,4 @@
-function PriceSvg() {
+function BadgePricingSvg() {
   return (
     <svg
       width="12"
@@ -18,4 +18,4 @@ function PriceSvg() {
   );
 }
 
-export default PriceSvg;
+export default BadgePricingSvg;

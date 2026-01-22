@@ -1,4 +1,3 @@
-
 function GithubSvg() {
   return (
     <svg
@@ -14,5 +13,6 @@ function GithubSvg() {
       />
     </svg>
   );
-};
+}
+
 export default GithubSvg;

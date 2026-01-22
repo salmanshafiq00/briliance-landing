@@ -2,7 +2,7 @@ import workOrderImage from '../assets/images/services/work-order.png';
 import workSyncImage from '../assets/images/services/work-sync.png';
 import integrationImage from '../assets/images/services/integration.png';
 import speakImage from '../assets/images/services/speak.png';
-import ServiceSvg from './ServiceSvg';
+import BadgeServicesSvg from './svg/BadgeServicesSvg';
 import ServiceCard from './ServiceCard';
 
 // Services data array
@@ -50,7 +50,7 @@ function FeatureSection() {
                         <div
                             className="px-[14px] py-[6px] bg-white shadow-[0px_0px_0px_4px_rgba(55,50,47,0.05)] overflow-hidden rounded-[90px] flex justify-start items-center gap-[8px] border border-[rgba(2,6,23,0.08)] shadow-xs"
                         >
-                            <ServiceSvg />
+                            <BadgeServicesSvg />
                             <div
                                 className="text-center flex justify-center flex-col text-[#37322F] text-xs font-medium leading-3"
                             >

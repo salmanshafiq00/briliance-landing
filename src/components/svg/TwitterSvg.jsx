@@ -1,4 +1,3 @@
-
 function TwitterSvg() {
   return (
     <svg
@@ -14,5 +13,6 @@ function TwitterSvg() {
       />
     </svg>
   );
-};
+}
+
 export default TwitterSvg;

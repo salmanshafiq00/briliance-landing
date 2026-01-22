@@ -1,6 +1,8 @@
-import GithubSvg from './GithubSvg';
-import LinkedInSvg from './LinkedInSvg';
-import TwitterSvg from './TwitterSvg';
+import GithubSvg from './svg/GithubSvg';
+import LinkedInSvg from './svg/LinkedInSvg';
+import TwitterSvg from './svg/TwitterSvg';
+import FooterLink from './cards/FooterLink';
+import { footerData } from '../data/footerData';
 
 function Footer() {
     return (
@@ -22,13 +24,13 @@ function Footer() {
                             <div
                                 className="text-center text-[#49423D] text-xl font-semibold leading-4"
                             >
-                                Brillance
+                                {footerData.brand.name}
                             </div>
                         </div>
                         <div
                             className="text-[rgba(73,66,61,0.90)] text-sm font-medium leading-[18px]"
                         >
-                            Coding made effortless
+                            {footerData.brand.tagline}
                         </div>
                         {/* Social Icons  */}
                         <div
@@ -36,19 +38,19 @@ function Footer() {
                         >
                             {/* Twitter  */}
                             <div
-                                className="w-6 h-6 relative overflow-hidden"
+                                className="w-6 h-6 relative overflow-hidden cursor-pointer hover:opacity-80 transition-opacity"
                             >
                                 <TwitterSvg />
                             </div>
                             {/* LinkedIn  */}
                             <div
-                                className="w-6 h-6 relative overflow-hidden"
+                                className="w-6 h-6 relative overflow-hidden cursor-pointer hover:opacity-80 transition-opacity"
                             >
                                 <LinkedInSvg />
                             </div>
                             {/* GitHub  */}
                             <div
-                                className="w-6 h-6 relative overflow-hidden"
+                                className="w-6 h-6 relative overflow-hidden cursor-pointer hover:opacity-80 transition-opacity"
                             >
                                 <GithubSvg />
                             </div>
@@ -59,125 +61,29 @@ function Footer() {
                     <div
                         className="self-stretch p-4 md:p-8 flex flex-col sm:flex-row flex-wrap justify-start sm:justify-between items-start gap-6 md:gap-8"
                     >
-                        {/* Product Column  */}
-                        <div
-                            className="flex flex-col justify-start items-start gap-3 flex-1 min-w-30"
-                        >
+                        {footerData.columns.map((column, index) => (
                             <div
-                                className="self-stretch text-[rgba(73,66,61,0.50)] text-sm font-medium leading-5"
-                            >
-                                Product
-                            </div>
-                            <div
-                                className="flex flex-col justify-end items-start gap-2"
+                                key={index}
+                                className="flex flex-col justify-start items-start gap-3 flex-1 min-w-[120px]"
                             >
                                 <div
-                                    className="text-[#49423D] text-sm font-normal leading-5 cursor-pointer hover:text-[#37322F] transition-colors"
+                                    className="self-stretch text-[rgba(73,66,61,0.50)] text-sm font-medium leading-5"
                                 >
-                                    Features
+                                    {column.title}
                                 </div>
                                 <div
-                                    className="text-[#49423D] text-sm font-normal leading-5 cursor-pointer hover:text-[#37322F] transition-colors"
+                                    className="flex flex-col justify-end items-start gap-2"
                                 >
-                                    Pricing
-                                </div>
-                                <div
-                                    className="text-[#49423D] text-sm font-normal leading-5 cursor-pointer hover:text-[#37322F] transition-colors"
-                                >
-                                    Integrations
-                                </div>
-                                <div
-                                    className="text-[#49423D] text-sm font-normal leading-5 cursor-pointer hover:text-[#37322F] transition-colors"
-                                >
-                                    Real-time Previews
-                                </div>
-                                <div
-                                    className="text-[#49423D] text-sm font-normal leading-5 cursor-pointer hover:text-[#37322F] transition-colors"
-                                >
-                                    Multi-Agent Coding
+                                    {column.links.map((link, linkIndex) => (
+                                        <FooterLink
+                                            key={linkIndex}
+                                            label={link.label}
+                                            href={link.href}
+                                        />
+                                    ))}
                                 </div>
                             </div>
-                        </div>
-
-                        {/* Company Column  */}
-                        <div
-                            className="flex flex-col justify-start items-start gap-3 flex-1 min-w-30"
-                        >
-                            <div
-                                className="text-[rgba(73,66,61,0.50)] text-sm font-medium leading-5"
-                            >
-                                Company
-                            </div>
-                            <div
-                                className="flex flex-col justify-center items-start gap-2"
-                            >
-                                <div
-                                    className="text-[#49423D] text-sm font-normal leading-5 cursor-pointer hover:text-[#37322F] transition-colors"
-                                >
-                                    About us
-                                </div>
-                                <div
-                                    className="text-[#49423D] text-sm font-normal leading-5 cursor-pointer hover:text-[#37322F] transition-colors"
-                                >
-                                    Our team
-                                </div>
-                                <div
-                                    className="text-[#49423D] text-sm font-normal leading-5 cursor-pointer hover:text-[#37322F] transition-colors"
-                                >
-                                    Careers
-                                </div>
-                                <div
-                                    className="text-[#49423D] text-sm font-normal leading-5 cursor-pointer hover:text-[#37322F] transition-colors"
-                                >
-                                    Brand
-                                </div>
-                                <div
-                                    className="text-[#49423D] text-sm font-normal leading-5 cursor-pointer hover:text-[#37322F] transition-colors"
-                                >
-                                    Contact
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Resources Column  */}
-                        <div
-                            className="flex flex-col justify-start items-start gap-3 flex-1 min-w-30"
-                        >
-                            <div
-                                className="text-[rgba(73,66,61,0.50)] text-sm font-medium leading-5"
-                            >
-                                Resources
-                            </div>
-                            <div
-                                className="flex flex-col justify-center items-center gap-2"
-                            >
-                                <div
-                                    className="self-stretch text-[#49423D] text-sm font-normal leading-5 cursor-pointer hover:text-[#37322F] transition-colors"
-                                >
-                                    Terms of use
-                                </div>
-                                <div
-                                    className="self-stretch text-[#49423D] text-sm font-normal leading-5 cursor-pointer hover:text-[#37322F] transition-colors"
-                                >
-                                    API Reference
-                                </div>
-                                <div
-                                    className="self-stretch text-[#49423D] text-sm font-normal leading-5 cursor-pointer hover:text-[#37322F] transition-colors"
-                                >
-                                    Documentation
-                                </div>
-                                <div
-                                    className="self-stretch text-[#49423D] text-sm font-normal leading-5 cursor-pointer hover:text-[#37322F] transition-colors"
-                                >
-                                    Community
-                                </div>
-                                <div
-                                    className="self-stretch text-[#49423D] text-sm font-normal leading-5 cursor-pointer hover:text-[#37322F] transition-colors"
-                                >
-                                    Support
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
 
