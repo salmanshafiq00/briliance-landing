@@ -1,4 +1,3 @@
-
 function LinkedInSvg() {
   return (
     <svg
@@ -14,5 +13,6 @@ function LinkedInSvg() {
       />
     </svg>
   );
-};
+}
+
 export default LinkedInSvg;

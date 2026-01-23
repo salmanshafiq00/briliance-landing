@@ -1,5 +1,4 @@
-
-function ServiceSvg() {
+function BadgeServicesSvg() {
   return (
     <svg
       width="12"
@@ -14,7 +13,7 @@ function ServiceSvg() {
         width="4"
         height="4"
         stroke="#37322F"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
       />
       <rect
@@ -23,7 +22,7 @@ function ServiceSvg() {
         width="4"
         height="4"
         stroke="#37322F"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
       />
       <rect
@@ -32,7 +31,7 @@ function ServiceSvg() {
         width="4"
         height="4"
         stroke="#37322F"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
       />
       <rect
@@ -41,10 +40,11 @@ function ServiceSvg() {
         width="4"
         height="4"
         stroke="#37322F"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
       />
     </svg>
   );
-};
-export default ServiceSvg;
+}
+
+export default BadgeServicesSvg;
